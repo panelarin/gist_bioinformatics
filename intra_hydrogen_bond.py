@@ -7,8 +7,8 @@ pymol.finish_launching()
 
 # Load the structures
 print("Loading structures...")
-cmd.load('/Users/myunghyunjeong/Desktop/6lni.pdb', '6lni')
-cmd.load('/Users/myunghyunjeong/Desktop/1qlz.pdb', '1qlz')
+cmd.load('/dir/6lni.pdb', '6lni')
+cmd.load('/dir/1qlz.pdb', '1qlz')
 
 # Define hydrogen bond cutoff distance
 hbond_cutoff_distance = 3.5  # Ångströms
@@ -37,7 +37,7 @@ else:
                 hbond_details.append([str(donor_resi), str(acceptor_resi), str(distance)])
 
 # Define the path to save the CSV file
-csv_file_path = '/Users/myunghyunjeong/Desktop/PDB_datasets/hbonds.csv'
+csv_file_path = '/dir/hbonds.csv'
 
 # Save the hydrogen bond details to a CSV file
 with open(csv_file_path, "w", newline="") as csvfile:
